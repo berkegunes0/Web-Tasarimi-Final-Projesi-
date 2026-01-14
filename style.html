@@ -1,0 +1,103 @@
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #2c3e50;
+    --nav-bg: #ffffff;
+    --accent-color: #3498db;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --nav-bg: #1e1e1e;
+    --accent-color: #f1c40f;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    transition: 0.4s;
+}
+
+header {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.zoomable {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s transform ease;
+}
+
+.zoomed {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#activity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.activity-item {
+    background: var(--nav-bg);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-left: 5px solid var(--accent-color);
+    transition: 0.3s;
+}
+
+.activity-item:hover {
+    transform: translateX(10px);
+}
+
+#hover-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--accent-color);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.hidden { display: none; }
+
+#contact-form input, #contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
